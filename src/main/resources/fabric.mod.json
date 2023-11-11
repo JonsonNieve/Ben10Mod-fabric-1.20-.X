@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "ben10",
+	"version": "${version}",
+	"name": "Ben 10 Mod",
+	"description": "This is a mod of Ben 10's Universe for Minecraft",
+	"authors": [
+		"JonsonNieve"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/ben10/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+          "net.jonsonnieve.ben10.Ben10Mod"
+		],
+		"client": [
+          "net.jonsonnieve.ben10.Ben10ModClient"
+		],
+		"fabric-datagen": [
+			"net.jonsonnieve.ben10.Ben10ModDataGenerator"
+		]
+	},
+	"mixins": [
+		"ben10.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.24",
+		"minecraft": "~1.20.2",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
