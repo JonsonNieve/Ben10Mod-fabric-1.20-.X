@@ -1,6 +1,6 @@
 {
 	"schemaVersion": 1,
-	"id": "ben10",
+	"id": "ben10mod",
 	"version": "${version}",
 	"name": "Ben 10 Mod",
 	"description": "This is a mod of Ben 10's Universe for Minecraft",
@@ -16,13 +16,13 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-          "net.jonsonnieve.ben10.Ben10Mod"
+          "net.jonsonnieve.ben10mod.Ben10Mod"
 		],
 		"client": [
-          "net.jonsonnieve.ben10.Ben10ModClient"
+          "net.jonsonnieve.ben10mod.Ben10ModClient"
 		],
 		"fabric-datagen": [
-			"net.jonsonnieve.ben10.Ben10ModDataGenerator"
+			"net.jonsonnieve.ben10mod.Ben10ModDataGenerator"
 		]
 	},
 	"mixins": [

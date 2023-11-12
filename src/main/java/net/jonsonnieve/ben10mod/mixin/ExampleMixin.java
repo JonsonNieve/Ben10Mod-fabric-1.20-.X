@@ -1,4 +1,4 @@
-package net.jonsonnieve.ben10.mixin;
+package net.jonsonnieve.ben10mod.mixin;
 
 import net.minecraft.server.MinecraftServer;
 import org.spongepowered.asm.mixin.Mixin;

@@ -1,4 +1,4 @@
-package net.jonsonnieve.ben10;
+package net.jonsonnieve.ben10mod;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
