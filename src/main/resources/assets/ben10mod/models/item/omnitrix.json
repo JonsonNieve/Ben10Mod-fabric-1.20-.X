@@ -2,5 +2,13 @@
   "parent": "item/generated",
   "textures": {
     "layer0": "ben10mod:item/omnitrix"
-  }
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "activated": 1
+      },
+        "model": "ben10mod:item/omnitrix_activated"
+    }
+  ]
 }

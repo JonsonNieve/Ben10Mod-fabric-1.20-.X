@@ -1,0 +1,6 @@
+{
+  "parent": "ben10mod:item/omnitrix",
+  "textures": {
+    "layer0": "ben10mod:item/omnitrix_activated"
+  }
+}
