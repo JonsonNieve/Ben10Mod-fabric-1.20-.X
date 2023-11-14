@@ -2,12 +2,9 @@ package net.jonsonnieve.ben10mod;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.jonsonnieve.ben10mod.item.ModItemGroups;
 import net.jonsonnieve.ben10mod.item.ModItems;
 import net.jonsonnieve.ben10mod.util.ModSounds;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.sound.SoundEvent;
-import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -22,6 +19,7 @@ public class Ben10Mod implements ModInitializer {
 		LOGGER.info("Hello Fabric world!");
 
 		ModSounds.registerModSounds();
+		ModItemGroups.registerItemGroups();
 		ModItems.registerModItems();
 	}
 }

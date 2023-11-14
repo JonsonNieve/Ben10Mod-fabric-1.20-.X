@@ -16,6 +16,8 @@ public class ModItems {
     public static final Item OMNITRIX = registerItem("omnitrix", new OmnitrixItem(new FabricItemSettings().maxCount(1)));
     private static void addItemsToIngredientTabItemGroup(FabricItemGroupEntries entries){
         entries.add(RUBY);
+    }
+    private static void addItemsToBen10TabItemGroup(FabricItemGroupEntries entries){
         entries.add(OMNITRIX);
     }
 
