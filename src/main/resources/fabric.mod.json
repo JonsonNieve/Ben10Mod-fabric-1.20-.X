@@ -23,9 +23,6 @@
 		],
 		"fabric-datagen": [
 			"net.jonsonnieve.ben10mod.Ben10ModDataGenerator"
-		],
-		"cpmapi": [
-			"net.jonsonnieve.ben10mod.animations.CPMCompat"
 		]
 	},
 	"mixins": [

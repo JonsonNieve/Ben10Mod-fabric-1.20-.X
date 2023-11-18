@@ -16,11 +16,6 @@ repositories {
 	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
 	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
 	// for more information about repositories.
-
-	maven {
-		name = "tom5454 maven"
-		url = "https://raw.githubusercontent.com/tom5454/maven/main"
-	}
 }
 
 loom {
@@ -61,10 +56,6 @@ dependencies {
 	// These are included in the Fabric API production distribution and allow you to update your mod to the latest modules at a later more convenient time.
 
 	// modImplementation "net.fabricmc.fabric-api:fabric-api-deprecated:${project.fabric_version}"
-
-	compileOnly "com.tom5454.cpm:CustomPlayerModels-API:${project.cpm_api_version}"
-	modRuntimeOnly "com.tom5454.cpm:CustomPlayerModels-Fabric-${project.cpm_mc_version}:${project.cpm_runtime_version}"
-
 }
 
 processResources {
