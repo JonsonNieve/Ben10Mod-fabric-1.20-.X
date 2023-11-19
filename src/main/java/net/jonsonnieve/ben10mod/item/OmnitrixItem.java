@@ -27,7 +27,7 @@ public class OmnitrixItem extends Item {
 
             playerEntity.playSound(ModSounds.OMNITRIX_SOUND_EVENT, 1.0F, 1.0F);
 
-            return TypedActionResult.success(playerEntity.getStackInHand(hand));
+            return TypedActionResult.pass(playerEntity.getStackInHand(hand));
         }
 
         return TypedActionResult.pass(playerEntity.getStackInHand(hand));
