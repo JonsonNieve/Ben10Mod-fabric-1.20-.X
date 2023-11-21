@@ -9,16 +9,13 @@ import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.util.InputUtil;
 import net.minecraft.item.Item;
 import net.minecraft.nbt.NbtCompound;
-import net.minecraft.text.Style;
-import net.minecraft.text.Text;
-import net.minecraft.text.TextColor;
 import net.minecraft.util.Hand;
 import org.lwjgl.glfw.GLFW;
 
-import java.awt.*;
+import static net.jonsonnieve.ben10mod.util.ModHUDMessagesHelper.GREEN_TEXT_STYLE;
+import static net.jonsonnieve.ben10mod.util.ModHUDMessagesHelper.showMessage;
 
 public class ModKeyBinds {
-    private static final Style GREEN_TEXT_STYLE = Style.EMPTY.withColor(Color.GREEN.getRGB());
     public static void registerKeybindings(){
         registerOmnitrixKeyBinding();
     }
@@ -41,16 +38,17 @@ public class ModKeyBinds {
                     isOmnitrixActivated = nbt.getBoolean("isActivated");
                 }
                 while (alienUpKeyBinding.wasPressed() && isOmnitrixActivated) {
-                    client.player.sendMessage(Text.literal(Ben10Mod.getNextAlien()).setStyle(GREEN_TEXT_STYLE), true);
+                    client.player.playSound(ModSounds.OMNITRIX_CHANGE_ALIEN_SOUND_EVENT, 1.0f, 1.0f);
+                    showMessage(client.player, Ben10Mod.getNextAlien(), GREEN_TEXT_STYLE, true);
                 }
             }
         });
 
         KeyBinding alienDownKeyBinding = KeyBindingHelper.registerKeyBinding(new KeyBinding(
-                "key.ben10mod.change-alien-down", // The translation key of the keybinding's name
-                InputUtil.Type.MOUSE, // The type of the keybinding, KEYSYM for keyboard, MOUSE for mouse.
-                GLFW.GLFW_MOUSE_BUTTON_4, // The keycode of the key
-                "category.ben10mod.change-alien-down" // The translation key of the keybinding's category.
+                "key.ben10mod.change-alien-down",
+                InputUtil.Type.MOUSE,
+                GLFW.GLFW_MOUSE_BUTTON_4,
+                "category.ben10mod.change-alien-down"
         ));
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
@@ -63,7 +61,9 @@ public class ModKeyBinds {
                     isOmnitrixActivated = nbt.getBoolean("isActivated");
                 }
                 while (alienDownKeyBinding.wasPressed() && isOmnitrixActivated) {
-                    client.player.sendMessage(Text.literal(Ben10Mod.getPrevAlien()).setStyle(GREEN_TEXT_STYLE), true);
+                    client.player.playSound(ModSounds.OMNITRIX_CHANGE_ALIEN_SOUND_EVENT, 1.0f, 1.0f);
+                    showMessage(client.player, Ben10Mod.getPrevAlien(), GREEN_TEXT_STYLE, true);
+
                 }
             }
         });

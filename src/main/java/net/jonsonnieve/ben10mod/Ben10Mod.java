@@ -38,6 +38,9 @@ public class Ben10Mod implements ModInitializer {
 	public static String getNextAlien(){
 		return ALIENS[Math.floorMod(++ALIEN_INDEX, ALIENS.length)];
 	};
+	public static String getCurrentAlien(){
+		return ALIENS[Math.floorMod(ALIEN_INDEX, ALIENS.length)];
+	};
 
 	public static String getPrevAlien(){
 		return ALIENS[Math.floorMod(--ALIEN_INDEX, ALIENS.length)];

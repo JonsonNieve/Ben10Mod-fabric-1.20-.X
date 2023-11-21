@@ -1,7 +1,15 @@
 {
-  "omnitrix_sound": {
+  "omnitrix_activated": {
     "sounds": [
-      "ben10mod:omnitrix_sound"
+      "ben10mod:omnitrix_activated"
+    ]
+  },"omnitrix_change_alien": {
+    "sounds": [
+      "ben10mod:omnitrix_change_alien"
+    ]
+  },"omnitrix_transform": {
+    "sounds": [
+      "ben10mod:omnitrix_transform"
     ]
   }
 }
